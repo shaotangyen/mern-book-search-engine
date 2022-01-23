@@ -9,6 +9,9 @@ import { removeBookId } from '../utils/localStorage';
 const SavedBooks = () => {
   const { loading, data } = useQuery(GET_ME);
   const userData = data?.me || {};
+  console.log(loading);
+  console.log(data);
+  console.log(userData);
   const [removeBook] = useMutation(REMOVE_BOOK);
   const handleDeleteBook = async (bookId) => {
     const token = Auth.loggedIn() ? Auth.getToken() : null;
@@ -25,8 +28,8 @@ const SavedBooks = () => {
     }
   };
 
-  // if data isn't here yet, say so
-  if (!loading) {
+  // if data is not ready yet, keep loading
+  if (loading) {
     return <h2>LOADING...</h2>;
   }
 
