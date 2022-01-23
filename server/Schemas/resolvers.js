@@ -9,32 +9,32 @@ const resolvers = {
                 const userData = await User.findOne({ _id: context.user._id })
                     .select('-__v -password')
                     .populate('books');
-
                 return userData;
             }
             throw new AuthenticationError('Not logged in');
         }
     },
     Mutation: {
-        login: async (parent, { email, password }) => {
-            const user = await User.findOne({ email });
-            if (!user) {
-                throw new AuthenticationError("Can't find this user");
-            }
-            const correctPassword = await user.isCorrectPassword(password);
-            if (!correctPassword) {
-                throw new AuthenticationError("Incorrect password.");
-            }
-            const token = signToken(user);
-            return { token, user };
-        },
         addUser: async (parent, args) => {
             const user = await User.create(args);
             const token = signToken(user);
             return { token, user };
         },
+        login: async (parent, { email, password }) => {
+            const user = await User.findOne({ email });
+            if (!user) {
+                throw new AuthenticationError('Incorrect credentials');
+            }
+            const correctPw = await user.isCorrectPassword(password);
+            if (!correctPw) {
+                throw new AuthenticationError('Incorrect credentials');
+            }
+            const token = signToken(user);
+            return { token, user };
+        },
         saveBook: async (parent, { book }, context) => {
             if (context.user) {
+
                 const user = await User.findByIdAndUpdate(
                     { _id: context.user._id },
                     { $push: { savedBooks: book } },
@@ -54,6 +54,7 @@ const resolvers = {
                 return user;
             }
             throw new AuthenticationError('You need to be logged in!');
+
         },
     },
 };
