@@ -1,14 +1,14 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-# mern-book-search-engine
+# MERN Book Search Engine
 
-This is a Book Search Engine using Google Books API built with Apollo Server. It is built using the MERN stack with a React front end, MongoDB database, and Node.js/Express.js server and API. Users will be able to use the application to sign-up/log-in, search and save their favourite books.
+This is a Book Search Engine using Google Books API, GraphQL API built with Apollo Server. It is built using the MERN stack with a React front end, MongoDB database, and Node.js/Express.js server and API. Users will be able to use the application to sign-up/log-in, search and save their favourite books.
 
 ## Table of Contents
 1. [Setup](#setup)
 2. [Design](#design)
 3. [Links](#links)
-4. [Screenshots](#screenshots)
+4. [Demo](#demo)
 5. [License](#license)
 
 <a name="setup"></a>
@@ -23,23 +23,24 @@ Or check out the full code on [Github](https://github.com/shaotangyen/mern-book-
 
 ## Design
 
-* Mobile-first responsiveness design
-* The code mainly uses React
-* Styling is based on bootstrap with owned color plate and CSS styles
-* Using Insomnia to run and test the application and its functions
+* Front-End using React
+* Back-End using Node.js/Express.js
+* Database using MongoDB
+* GraphQL API built with Apollo Server
+* App is built using MERN stack
+* App is deployed to Heroku
 
 <a name="links"></a>
 
 ## Links
 
-Please check out [deployed website on Github Page](https://shaotangyen.github.io/portfolio-react/) for the app, or check out [GitHub](https://github.com/shaotangyen/portfolio-react) for all codes.
+Please check out [Heroku](https://agile-basin-26461.herokuapp.com/) for the app, or check out [GitHub](https://github.com/shaotangyen/mern-book-search-engine) for all codes.
 
 <a name="screenshots"></a>
 
-## Screenshots
+## Demo
 
-<img src="./assets/demo-1.jpg" alt="app-demo" style="height:400px;"/>
-<img src="./assets/demo-2.jpg" alt="app-demo" style="height:400px;"/>
+<img src="./assets/demo.gif" alt="app-demo" style="height:400px;"/>
 
 <a name="license"></a>
 
