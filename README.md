@@ -2,7 +2,7 @@
 
 # mern-book-search-engine
 
-This is an updated Portfolio website using React & JavaScript. The site has an introduction, showcases project portfolios, links to each project, a contact form and downloadable resume.
+This is a Book Search Engine using Google Books API built with Apollo Server. It is built using the MERN stack with a React front end, MongoDB database, and Node.js/Express.js server and API. Users will be able to use the application to sign-up/log-in, search and save their favourite books.
 
 ## Table of Contents
 1. [Setup](#setup)
@@ -15,9 +15,9 @@ This is an updated Portfolio website using React & JavaScript. The site has an i
 
 ## Setup
 
-You can visit the [deployed website on GitHub Page](https://shaotangyen.github.io/portfolio-react/), or download the codes and run it using [React](https://create-react-app.dev/docs/getting-started/).
+You can visit the deployed website on: [Heroku](https://agile-basin-26461.herokuapp.com/).
 
-To install React, you need to type ``npx create-react-app [folder-name]`` then type ``npm i && npm start``.
+Or check out the full code on [Github](https://github.com/shaotangyen/mern-book-search-engine), clone it and run it with ``npm install && npm run develop``.
 
 <a name="design"></a>
 
