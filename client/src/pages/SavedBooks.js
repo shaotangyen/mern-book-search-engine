@@ -26,7 +26,7 @@ const SavedBooks = () => {
     }
   };
 
-  // if data is not ready yet, keep loading
+  // if data is not ready yet, keep loading. Otherwise do the rest.
   if (loading) {
     return <h2>LOADING...</h2>;
   }
